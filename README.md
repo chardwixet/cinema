@@ -1,4 +1,4 @@
-# cinema
+# cinema-react
 
 Цель разработки: Практика React.
 

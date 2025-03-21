@@ -1,0 +1,26 @@
+.btn {
+  position: absolute;
+  padding: 0;
+  padding: 12px;
+
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 0;
+
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.modal {
+  top: 0;
+  right: -72px;
+}
+
+.card {
+  top: 0;
+  right: -20px;
+  transform: translateY(-50%);
+}

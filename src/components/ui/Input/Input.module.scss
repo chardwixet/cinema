@@ -1,0 +1,36 @@
+.label {
+  position: relative;
+}
+
+.input {
+  padding: 18px 16px 18px 52px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  width: 340px;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 133%;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.error .input {
+  border-color: #ff7575;
+}
+
+.error path {
+  fill: #ff7575;
+  fill-opacity: 1;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}

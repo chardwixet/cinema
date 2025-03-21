@@ -1,0 +1,33 @@
+.content {
+  padding: 42px 0;
+}
+
+.list {
+  display: flex;
+  justify-content: end;
+  gap: 24px;
+}
+
+.item {
+  line-height: 0;
+}
+
+.link {
+  display: block;
+
+  & path {
+    transition: fill 0.2s ease-in-out;
+  }
+
+  & rect {
+    transition: stroke 0.2s ease-in-out;
+  }
+
+  &:hover path {
+    fill: #b4a9ff;
+  }
+
+  &:hover rect {
+    stroke: #b4a9ff;
+  }
+}

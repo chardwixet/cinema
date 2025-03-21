@@ -1,0 +1,41 @@
+.list {
+  position: absolute;
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  right: 0;
+  top: 60px;
+  border-radius: 8px;
+  background-color: #393b3c;
+  gap: 5px;
+  z-index: 999;
+}
+
+.item {
+
+  border-radius: inherit;
+
+
+}
+
+.img {
+  width: 40px;
+  height: 52px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 5px;
+  border: 1px solid transparent;
+  width: 559px;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: inherit;
+
+  &:hover {
+    border-color: #fff;
+  }
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+
+  align-items: center;
+
+
+  color: #fff;
+  border-radius: 17px;
+}
+
+.big {
+  gap: 5px;
+  padding: 5px 12px;
+}
+
+.small {
+  gap: 1px;
+  padding: 5px 8px;
+}
+
+.small svg {
+  height: 10px;
+}

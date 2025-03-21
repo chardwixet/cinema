@@ -1,0 +1,114 @@
+@mixin btn-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin text {
+  line-height: 133%;
+}
+
+@mixin defaultBtn {
+  @include btn-reset;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  border-radius: 28px;
+}
+
+.menuNoBorder {
+  @include btn-reset;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: #b4a9ff;
+  }
+}
+
+.menu {
+  @include btn-reset;
+}
+
+.primary {
+  @include defaultBtn;
+
+  color: #fff;
+  background-color: #67a5eb;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@mixin defaultSecondary {
+  @include defaultBtn;
+
+  border: 1px solid rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    background-color: #ffffff4f;
+  }
+}
+
+.secondary {
+  @include defaultBtn;
+  @include defaultSecondary;
+
+  background-color: #393b3c;
+}
+
+.icon {
+  @include btn-reset;
+  @include defaultBtn;
+  @include defaultSecondary;
+  line-height: 0px;
+  background: #333;
+
+  &:hover {
+    fill: #000;
+  }
+}
+
+.none {
+  @include defaultBtn;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.text-md {
+  @include text;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.text-lg {
+  @include text;
+
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.text-none {
+}
+
+.padding-md {
+  padding: 16px 48px;
+}
+
+.padding-lg {
+  padding: 16px 126px;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.padding-icon {
+  padding: 18px 23px;
+}

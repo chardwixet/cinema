@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Play';
+  src:
+    url('assets/fonts/play-regular.woff2') format('woff2'),
+    url('assets/fonts/play-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Play';
+  src:
+    url('assets/fonts/play-bold.woff2') format('woff2'),
+    url('assets/fonts/play-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+}

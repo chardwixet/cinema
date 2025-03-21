@@ -1,0 +1,1 @@
+export { Infomovie } from './Infomovie';

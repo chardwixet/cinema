@@ -1,0 +1,47 @@
+.nav {
+}
+
+.list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+@mixin default {
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  @include default();
+  border-bottom: 1.5px solid #dc5dfc;
+}
+
+.default {
+  @include default();
+}
+
+.item:first-child {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.logo {
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.text {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}

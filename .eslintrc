@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+  },
+  "extends": ["airbnb", "airbnb/hooks", "airbnb-typescript", "plugin:prettier/recommended"],
+  "overrides": [],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.app.json",
+    "requireConfigFile": false,
+  },
+  "rules": {
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"],
+      },
+    ],
+  },
+}

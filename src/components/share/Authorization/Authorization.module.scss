@@ -1,0 +1,15 @@
+.icon {
+  display: none;
+  fill: white;
+  fill-opacity: 1;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.textButton {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}

@@ -1,15 +1,24 @@
 .icon {
   display: none;
-  fill: white;
-  fill-opacity: 1;
 
   @media (max-width: 1200px) {
     display: block;
+    max-height: 24px;
   }
+}
+
+.icon path {
+  fill: white;
+  fill-opacity: 1;
 }
 
 .textButton {
   @media (max-width: 1200px) {
     display: none;
   }
+}
+
+.contentBtn {
+  display: flex;
+  height: 100%;
 }

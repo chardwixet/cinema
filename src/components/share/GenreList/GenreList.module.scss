@@ -2,13 +2,18 @@
   padding-top: 64px;
 }
 
-.subtitle {
+.FilmTitle {
   margin: 0;
   font-weight: 700;
   font-size: 48px;
   line-height: 117%;
   color: #fff;
   margin-bottom: 64px;
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+    line-height: 133%;
+  }
 }
 
 .img {
@@ -22,6 +27,18 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 40px;
   row-gap: 64px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .item {

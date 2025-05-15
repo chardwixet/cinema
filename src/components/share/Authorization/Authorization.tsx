@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import People from '@assets/svg/people.svg?react';
+import User from '@assets/svg/user.svg?react';
 import { Button } from '@/components/ui/Button';
 import { RootState } from '@/store';
 import { LinkMenu } from '@/components/ui/LinkMenu';
@@ -14,18 +14,20 @@ export function Authorization() {
 
   return data.email ? (
     <LinkMenu to="/account">
-      <People className={style.icon} /> <span className={style.textButton}>{data.name}</span>
+      <User className={style.icon} /> <span className={style.textButton}>{data.name}</span>
     </LinkMenu>
   ) : (
-    <Button
-      type="button"
-      onClick={toggleModal}
-      variant="menuNoBorder"
-      textSize="text-lg"
-      padding="padding-none"
-    >
-      <People className={style.icon} />
-      <span className={style.textButton}>Войти</span>
-    </Button>
+    <div className={style.contentBtn}>
+      <Button
+        type="button"
+        onClick={toggleModal}
+        variant="menuNoBorder"
+        textSize="text-lg"
+        padding="padding-none"
+      >
+        <User className={style.icon} />
+        <span className={style.textButton}>Войти</span>
+      </Button>
+    </div>
   );
 }

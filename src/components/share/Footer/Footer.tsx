@@ -4,6 +4,7 @@ import Ok from '@assets/svg/ok.svg?react';
 import Tg from '@assets/svg/tg.svg?react';
 
 import style from './Footer.module.scss';
+import { Container } from '../Container';
 
 interface Link {
   icon: JSX.Element;
@@ -31,16 +32,18 @@ const LINKS: Link[] = [
 
 export function Footer() {
   return (
-    <div className={style.content}>
-      <ul className={style.list}>
-        {LINKS.map((item) => (
-          <li key={crypto.randomUUID()} className={style.item}>
-            <a className={style.link} href={item.link}>
-              {item.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Container>
+      <div className={style.content}>
+        <ul className={style.list}>
+          {LINKS.map((item) => (
+            <li key={crypto.randomUUID()} className={style.item}>
+              <a className={style.link} href={item.link}>
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Container>
   );
 }

@@ -10,7 +10,7 @@ export interface RouterType {
   title: string;
   path: string;
   element: JSX.Element;
-  logo?: JSX.Element;
+  svg?: JSX.Element;
   child?: RouterType[];
 }
 
@@ -24,7 +24,7 @@ export const pagesMenuData: RouterType[] = [
     path: '/movie/genres',
     element: <Genres />,
     title: 'Жанры',
-    logo: <GenresSvg />,
+    svg: <GenresSvg />,
   },
 ];
 

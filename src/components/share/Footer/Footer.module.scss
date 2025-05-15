@@ -1,11 +1,19 @@
 .content {
   padding: 42px 0;
+
+  @media (max-width: 450px) {
+    padding: 36px 0;
+  }
 }
 
 .list {
   display: flex;
   justify-content: end;
   gap: 24px;
+
+  @media (max-width: 450px) {
+    justify-content: start;
+  }
 }
 
 .item {
@@ -29,5 +37,12 @@
 
   &:hover rect {
     stroke: #b4a9ff;
+  }
+
+  @media (max-width: 450px) {
+    & svg {
+      height: 24px;
+      width: 24px;
+    }
   }
 }

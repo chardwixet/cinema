@@ -61,7 +61,7 @@ export function SignUp({ HandleToogle }: Props) {
               placeholder="Имя"
               type="text"
               register={register('name')}
-              svg="people"
+              svg="user"
             />
             <Input
               error={errors.surname}
@@ -69,7 +69,7 @@ export function SignUp({ HandleToogle }: Props) {
               placeholder="Фамилия"
               type="text"
               register={register('surname')}
-              svg="people"
+              svg="user"
             />
             <Input
               error={errors.password}

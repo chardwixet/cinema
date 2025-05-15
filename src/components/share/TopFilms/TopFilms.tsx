@@ -7,6 +7,7 @@ import { Loader } from '@components/ui/Loader';
 import { Link } from 'react-router';
 import style from './TopFilms.module.scss';
 import { CardMovie } from '../CardMovie';
+import { Container } from '../Container';
 
 export function TopFilms() {
   const { data, isFetching, status, refetch, error } = useQuery(
@@ -26,12 +27,15 @@ export function TopFilms() {
         <>
           {status === 'success' && (
             <section className={style.content}>
-              <h2 className={style.subtitle}>Топ 10 фильмов</h2>
+              <h2 className={style.FilmTitle}>Топ 10 фильмов</h2>
+
               <ul className={style.list}>
                 {data.map((movie, index) => (
                   <li className={style.item} key={movie.id}>
-                    <span className={style.id}>{index + 1}</span>
-                    <CardMovie movie={movie} />
+                    <div className={style.card}>
+                      <span className={style.id}>{index + 1}</span>
+                      <CardMovie movie={movie} />
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -40,6 +44,7 @@ export function TopFilms() {
           {status === 'error' && (
             <div>
               <span>Произошла ошибка </span>
+              {console.log(error)}
               <button type="button" onClick={() => refetch()}>
                 Повторить запрос
               </button>

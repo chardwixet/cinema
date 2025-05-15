@@ -7,9 +7,12 @@
   line-height: 133%;
   text-decoration: none;
   color: inherit;
-  height: 100%;
 
   transition: color 0.2s ease-in-out;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 @mixin btnReset {
@@ -22,8 +25,8 @@
 }
 
 .active {
-  @include default();
   border-bottom: 1.5px solid #dc5dfc;
+  @include default();
 
   @media (max-width: 1200px) {
     border: none;
@@ -31,11 +34,16 @@
 }
 
 .activeChild {
-  @include default();
   border-bottom: 1.5px solid #dc5dfc;
+  @include default();
+
+  @media (max-width: 1200px) {
+    padding-bottom: 10px;
+  }
 }
 
 .default {
+  border-bottom: 1.5px solid transparent;
   @include default();
   &:hover {
     color: #b4a9ff;

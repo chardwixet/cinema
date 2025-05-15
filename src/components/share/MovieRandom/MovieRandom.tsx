@@ -1,6 +1,7 @@
 import { Movie } from 'src/api/Movies/type';
 import { Film } from '../Film';
 import style from './movieRandom.module.scss';
+import { Container } from '../Container';
 
 export interface Props {
   movieRandom: Movie;
@@ -8,5 +9,9 @@ export interface Props {
 }
 
 export function MovieRandom({ movieRandom, refetch }: Props) {
-  return <Film film={movieRandom} refetch={refetch} />;
+  return (
+    <Container>
+      <Film film={movieRandom} refetch={refetch} />
+    </Container>
+  );
 }

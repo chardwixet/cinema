@@ -5,9 +5,33 @@
   font-size: 48px;
   line-height: 117%;
   color: #fff;
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+    line-height: 133%;
+  }
 }
 
 .list {
   display: flex;
-  gap: 70px;
+  gap: 63px;
+
+  @media (max-width: 450px) {
+    gap: 24px;
+  }
+}
+
+.linkText {
+  display: inline;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.linkMobileText {
+  display: none;
+  @media (max-width: 900px) {
+    display: inline;
+  }
 }

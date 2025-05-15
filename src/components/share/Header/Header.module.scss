@@ -2,11 +2,25 @@
   display: flex;
   padding: 24px 0;
   justify-content: space-between;
-  align-items: center;
+
+  @media (max-width: 450px) {
+    padding: 20px 0;
+    padding-bottom: 9px;
+  }
 }
 
 .logo {
-  font: 30px;
+  width: 143px;
+  height: 32px;
+
+  & path {
+    fill: white;
+  }
+
+  @media (max-width: 450px) {
+    width: 80px;
+    height: 18px;
+  }
 }
 
 .link {

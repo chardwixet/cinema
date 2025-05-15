@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { queryClient } from '@/api/queryClient';
 import { GetLogout } from '@/api/User';
 import { removeUser } from '@/store/slices/userSlice';
-import { UserInfo } from '@/components/ui/settingInfo';
+import { UserInfo } from '@/components/ui/UserInfo';
 import { RootState } from '@/store';
 
 import style from './Settings.module.scss';

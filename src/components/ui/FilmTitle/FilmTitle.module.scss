@@ -1,0 +1,17 @@
+.small {
+  font-size: 18px;
+}
+
+.big {
+  font-size: 48px;
+  margin-bottom: 17px;
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+  }
+}
+
+.filmTitle {
+  margin: 0;
+  text-wrap: wrap;
+}

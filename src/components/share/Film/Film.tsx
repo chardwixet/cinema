@@ -79,13 +79,16 @@ export function Film({ film, refetch }: Props) {
           title={film.title}
         />
         <p className={style.descr}>{film.plot}</p>
-        <div className={style.footer}>
-          <Button type="button" onClick={toogleModalPlayer}>
-            Трейлер
-          </Button>
+        <div className={`${style.footer} ${refetch && style.footerMobile}`}>
+          <div className={`${style.footerBtn} ${refetch && style.footerWithRefetch}`}>
+            <Button type="button" onClick={toogleModalPlayer}>
+              Трейлер
+            </Button>
+          </div>
+
           {refetch && (
             <Link className={style.link} to={`/movie/${film.id}`}>
-              <Button variant="secondary" type="button" onClick={toogleModal}>
+              <Button variant="secondary" type="button">
                 О фильме
               </Button>
             </Link>

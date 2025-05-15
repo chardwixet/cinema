@@ -99,6 +99,10 @@
 
 .padding-md {
   padding: 16px 48px;
+
+  @media (max-width: 450px) {
+    padding: 16px 39px;
+  }
 }
 
 .padding-lg {

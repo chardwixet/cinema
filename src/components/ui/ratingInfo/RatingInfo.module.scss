@@ -11,6 +11,10 @@
 .big {
   gap: 5px;
   padding: 5px 12px;
+
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
 }
 
 .small {

@@ -1,8 +1,18 @@
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: end;
   gap: 40px;
+
+  @media (max-width: 450px) {
+    gap: 20px;
+  }
+}
+
+.authorization {
+  display: flex;
+  align-items: end;
+  height: 100%;
 }
 
 @mixin btnReset {
@@ -16,11 +26,13 @@
 
 .btn {
   @include btnReset();
+
+  display: block;
+  max-height: 24px;
 }
 
 .icon {
   fill: white;
-  width: 20px;
 }
 
 .input {

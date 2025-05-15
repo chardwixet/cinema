@@ -12,7 +12,7 @@ export function Navbar() {
         {pagesMenuData.map((item) => (
           <li className={style.item} key={crypto.randomUUID()}>
             <LinkMenu to={item.path}>
-              <span className={style.logo}>{item.logo}</span>
+              <span className={style.svg}>{item.svg}</span>
               <span className={style.text}>{item.title}</span>
             </LinkMenu>
           </li>

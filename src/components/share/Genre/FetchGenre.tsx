@@ -7,6 +7,7 @@ import { Genre } from './Genre';
 import { Button } from '@/components/ui/Button';
 
 import style from './Genre.module.scss';
+import { Container } from '../Container';
 
 export function FetchGenre() {
   let count = 15;
@@ -38,7 +39,7 @@ export function FetchGenre() {
       ) : (
         <>
           {status === 'success' && (
-            <div className={style.container}>
+            <Container>
               <Genre genre={genre} movies={data} />
 
               <div>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
@@ -55,7 +56,7 @@ export function FetchGenre() {
                     ? 'Показать ещё'
                     : 'Нечего загружать'}
               </Button>
-            </div>
+            </Container>
           )}
           {status === 'error' && (
             <div>

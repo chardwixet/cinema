@@ -1,20 +1,37 @@
 .content {
-  padding-top: 36px;
+  padding-top: 60px;
   padding-bottom: 120px;
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 64px;
+
+  @media (max-width: 1200px) {
+    padding-top: 119px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 100px;
+    margin: -100px 0;
+  }
+
+  @media (max-width: 450px) {
+    padding: 100px 22px;
+  }
 }
 
 .item {
   position: relative;
   box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
   border-radius: 28px;
-
+  width: 224px;
+  min-height: 336px;
+  flex-shrink: 0;
   &:hover .btn {
     display: block;
   }

@@ -1,8 +1,10 @@
 import { Movie } from '@/api/Movies';
 import { Film } from '../Film';
-import { Subtitle } from '@/components/ui/Subtitle';
+import { FilmTitle } from '@/components/ui/FilmTitle';
 
 import style from './Infomovie.module.scss';
+import { Container } from '../Container';
+import { SpanTitle } from '@/components/ui/SpanTitle';
 
 interface Props {
   movie: Movie;
@@ -37,10 +39,10 @@ export function Infomovie({ movie }: Props) {
   ];
 
   return (
-    <div className="">
+    <Container>
       <Film film={movie} />
       <div className={style.info}>
-        <h3 className={style.subtitle}>О фильме</h3>
+        <h3 className={style.FilmTitle}>О фильме</h3>
         <div className={style.someList}>
           <ul className={style.listTitle}>
             {INFO_MOVIE.map(
@@ -48,7 +50,7 @@ export function Infomovie({ movie }: Props) {
                 item.result && (
                   <li key={crypto.randomUUID()} className={style.item}>
                     <div className={style.blockTitle}>
-                      <span className={style.text}>{item.title}</span>
+                      <SpanTitle>{item.title}</SpanTitle>
                       <span className={style.dots} />
                     </div>
                     <div className={style.text}>{item.result}</div>
@@ -58,6 +60,6 @@ export function Infomovie({ movie }: Props) {
           </ul>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

@@ -5,6 +5,7 @@ import { Search } from '../Search';
 import { useModal } from '@/hooks/use-modal';
 
 import style from './WrapperMenu.module.scss';
+import { Authorization } from '../Authorization';
 
 export function WrapperMenu() {
   const [isOpenSearch, toogleSearch] = useModal('search');
@@ -24,6 +25,7 @@ export function WrapperMenu() {
       <Modal isShowingModal={isOpenSearch} onCloseModal={toogleSearch} btnEx={false} position="top">
         <Search />
       </Modal>
+      <Authorization />
     </div>
   );
 }

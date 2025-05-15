@@ -1,10 +1,12 @@
 .nav {
+  height: 100%;
 }
 
 .list {
   display: flex;
   gap: 40px;
-  align-items: center;
+  align-items: end;
+  height: 100%;
 }
 
 @mixin default {
@@ -15,6 +17,7 @@
   line-height: 133%;
   text-decoration: none;
   color: inherit;
+
 }
 
 .active {
@@ -32,11 +35,12 @@
   }
 }
 
-.logo {
+.svg {
   display: none;
 
   @media (max-width: 1200px) {
     display: block;
+    max-height: 24px;
   }
 }
 

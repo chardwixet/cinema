@@ -26,7 +26,7 @@ export function Favorites({ data }: Props) {
 
   const dispatch = useDispatch();
 
-  function some(movieId: number) {
+  function deleteCard(movieId: number) {
     const arr = data1.filter((item) => {
       return item.id !== movieId;
     });
@@ -41,7 +41,7 @@ export function Favorites({ data }: Props) {
         {data1.map((movie) => (
           <li className={style.item} key={movie.id}>
             <div className={style.btn}>
-              <ButtonEx onClick={() => some(movie.id)} positionFor="card" />
+              <ButtonEx onClick={() => deleteCard(movie.id)} positionFor="card" />
             </div>
             <CardMovie movie={movie} />
           </li>

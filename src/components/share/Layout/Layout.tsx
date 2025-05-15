@@ -9,11 +9,9 @@ interface Props {}
 export function Layout({ children }: PropsWithChildren) {
   return (
     <div className={style.layout}>
-      <Container>
-        <Header />
-        <main className={style.content}> {children}</main>
-        <Footer />
-      </Container>
+      <Header />
+      <main className={style.content}> {children}</main>
+      <Footer />
     </div>
   );
 }

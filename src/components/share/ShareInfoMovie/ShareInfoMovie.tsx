@@ -1,6 +1,6 @@
 import { RatingInfo } from '@/components/ui/RatingInfo';
 import style from './ShareInfoMovie.module.scss';
-import { Subtitle } from '@/components/ui/Subtitle';
+import { FilmTitle } from '@/components/ui/FilmTitle';
 
 interface Props {
   tmdbRating: number;
@@ -38,7 +38,7 @@ export function ShareInfoMovie({
         <span>{genres[0]}</span>
         <span>{time}</span>
       </div>
-      <Subtitle title={title} variant={variant} />
+      <FilmTitle title={title} variant={variant} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .small {
   display: flex;
+
   padding: 20px 8px;
   flex-direction: column;
   gap: 8px;
@@ -7,27 +8,25 @@
 
 .topInfo {
   display: flex;
-
+  flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.subtitle {
+.FilmTitle {
   margin: 0;
-
 }
 
 .big .topInfo {
   font-size: 18px;
   margin-bottom: 17px;
+
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
 }
-
-
-
 
 .small .topInfo {
   font-size: 14px;
 }
-
-

@@ -1,0 +1,10 @@
+.spanTitle {
+  font-size: 18px;
+  line-height: 133%;
+
+  @media (max-width: 450px) {
+    font-size: 14px;
+    line-height: 143%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

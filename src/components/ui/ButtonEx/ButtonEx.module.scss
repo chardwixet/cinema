@@ -17,6 +17,10 @@
 .modal {
   top: 0;
   right: -72px;
+
+  @media (max-width: 900px) {
+    right: 0px;
+  }
 }
 
 .card {

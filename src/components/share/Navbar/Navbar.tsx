@@ -1,6 +1,3 @@
-import { Button } from '@components/ui/Button';
-import { NavLink } from 'react-router';
-
 import style from './Navbar.module.scss';
 import { pagesMenuData } from '@/pages/pageData';
 import { LinkMenu } from '@/components/ui/LinkMenu';

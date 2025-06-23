@@ -1,8 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import { queryClient } from '@api/queryClient';
 import { LoginSchema, loginUser } from '@api/User';
-import { useDispatch } from 'react-redux';
-import { setUser } from '@store/slices/userSlice';
 import { Button } from '@components/ui/Button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -59,8 +57,6 @@ export function Login({ HandleToogle, onCloseModal }: Props) {
             svg="key"
           />
         </div>
-
-        {/* {loginMutation.error && <span>{loginMutation.error.message}</span>} */}
 
         <Button type="submit" isLoading={loginMutation.isPending}>
           Войти

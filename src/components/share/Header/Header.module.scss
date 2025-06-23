@@ -10,12 +10,7 @@
 }
 
 .logo {
-  width: 143px;
-  height: 32px;
-
-  & path {
-    fill: white;
-  }
+  font-size: 30px;
 
   @media (max-width: 450px) {
     width: 80px;
@@ -24,5 +19,7 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
   line-height: 0;
 }

@@ -1,6 +1,5 @@
 import { Movie } from '@/api/Movies';
 import { Film } from '../Film';
-import { FilmTitle } from '@/components/ui/FilmTitle';
 
 import style from './Infomovie.module.scss';
 import { Container } from '../Container';

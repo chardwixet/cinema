@@ -4,20 +4,16 @@ import Refresh from '@assets/svg/refresh.svg?react';
 import Heart from '@assets/svg/heart.svg?react';
 import HeartFill from '@assets/svg/heart-fill.svg?react';
 import { Link } from 'react-router';
-import { useEffect, useLayoutEffect, useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
+import { useLayoutEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import ReactPlayer from 'react-player';
 import { ShareInfoMovie } from '../ShareInfoMovie';
-import { DeleteFavorites, PostFavorites } from '@/api/Movies';
-import { queryClient } from '@/api/queryClient';
 
 import style from './Film.module.scss';
 import { RootState } from '@/store';
 
 import { addFavoriteAction, deleteFavoriteAction } from '@/store/slices/userSlice';
-import { Player, YtPlayer } from '../YtPlayer';
+import { YtPlayer } from '../YtPlayer';
 import { useModal } from '@/hooks/use-modal';
 import { useAddFavorite, useDeleteFavorite } from '@/hooks/use-favorite';
 
@@ -73,7 +69,7 @@ export function Film({ film, refetch }: Props) {
       <div className={style.info}>
         <ShareInfoMovie
           tmdbRating={film.tmdbRating}
-          releaseDate={film.releaseDate}
+          releaseDate={film.releaseDate || ''}
           genres={film.genres}
           runtime={film.runtime}
           title={film.title}
@@ -116,7 +112,11 @@ export function Film({ film, refetch }: Props) {
         </div>
       </div>
       <div className={style.poster}>
-        <img className={style.img} src={film.posterUrl} alt="" />
+        <img
+          className={style.img}
+          src={film.posterUrl || `/src/assets/img/film-undefiend.jpg`}
+          alt=""
+        />
       </div>
     </div>
   );

@@ -1,12 +1,7 @@
-.nav {
-  height: 100%;
-}
-
 .list {
   display: flex;
   gap: 40px;
-  align-items: end;
-  height: 100%;
+  align-items: center;
 }
 
 @mixin default {
@@ -17,7 +12,6 @@
   line-height: 133%;
   text-decoration: none;
   color: inherit;
-
 }
 
 .active {

@@ -10,13 +10,15 @@ interface Props {
 }
 
 export function LinkMenu({ to, onClick, childLink = false, children }: PropsWithChildren<Props>) {
+  function getLinkClass(isActive: boolean) {
+    if (isActive) {
+      return childLink ? style.activeChild : style.active;
+    }
+    return style.default;
+  }
+
   return (
-    <NavLink
-      className={({ isActive }) =>
-        isActive ? (!childLink ? style.active : style.activeChild) : style.default
-      }
-      to={to}
-    >
+    <NavLink className={({ isActive }) => getLinkClass(isActive)} to={to}>
       <button type="button" className={style.btn} onClick={onClick}>
         {children}
       </button>

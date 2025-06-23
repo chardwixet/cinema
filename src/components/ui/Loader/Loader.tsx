@@ -1,4 +1,5 @@
-import './Loader.css';
+import { Container } from '@/components/share/Container';
+import style from './Loader.module.scss';
 
 export interface ILoaderProps {
   color?: 'blue' | 'white';
@@ -6,10 +7,12 @@ export interface ILoaderProps {
 
 export function Loader({ color = 'white' }) {
   return (
-    <div className="loader" data-color={color}>
-      <div className="loader__segment" />
-      <div className="loader__segment" />
-      <div className="loader__segment" />
-    </div>
+    <Container>
+      <div className={style.loader} data-color={color}>
+        <div className={style.loader__segment} />
+        <div className={style.loader__segment} />
+        <div className={style.loader__segment} />
+      </div>
+    </Container>
   );
 }

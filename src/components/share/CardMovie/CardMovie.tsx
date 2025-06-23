@@ -10,7 +10,11 @@ interface Props {
 export function CardMovie({ movie }: Props) {
   return (
     <Link className={style.link} to={`/movie/${movie.id}`}>
-      <img className={style.img} src={movie.posterUrl ? movie.posterUrl : ''} alt="" />
+      <img
+        className={style.img}
+        src={movie.posterUrl || `/src/assets/img/film-undefiend.jpg`}
+        alt=""
+      />
     </Link>
   );
 }

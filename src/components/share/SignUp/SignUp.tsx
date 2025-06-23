@@ -1,12 +1,10 @@
 import { useMutation } from '@tanstack/react-query';
 import { queryClient } from '@api/queryClient';
 import { registerUser, SignUpSchema, SignUpType } from '@api/User';
-import { setUser } from '@store/slices/userSlice';
-import { useDispatch } from 'react-redux';
 import { Button } from '@components/ui/Button';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Input } from '@/components/ui/Input';
 
 import style from './SignUp.module.scss';

@@ -8,7 +8,7 @@ import { GetGenreList } from '@/api/Genres';
 import { Container } from '../Container';
 
 export function GenreList() {
-  const { data, isFetching, status, refetch, error } = useQuery(
+  const { data, isFetching, status, refetch } = useQuery(
     {
       queryFn: () => GetGenreList(),
       queryKey: ['genres'],

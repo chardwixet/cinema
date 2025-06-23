@@ -1,16 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { queryClient } from '@api/queryClient';
-
 import { GetmovieTop10 } from '@api/Movies';
 import { Loader } from '@components/ui/Loader';
-
-import { Link } from 'react-router';
 import style from './TopFilms.module.scss';
 import { CardMovie } from '../CardMovie';
-import { Container } from '../Container';
 
 export function TopFilms() {
-  const { data, isFetching, status, refetch, error } = useQuery(
+  const { data, isFetching, status, refetch } = useQuery(
     {
       queryFn: () => GetmovieTop10(),
       queryKey: ['movieTop10'],
@@ -44,7 +40,6 @@ export function TopFilms() {
           {status === 'error' && (
             <div>
               <span>Произошла ошибка </span>
-              {console.log(error)}
               <button type="button" onClick={() => refetch()}>
                 Повторить запрос
               </button>
